@@ -19,10 +19,6 @@ public class PipeSpawner : MonoBehaviour
             SpawnPipe();
             timer = 0f;
         }
-        else
-        {
-            Debug.Log("Else branch!");
-        }
     }
 
     void SpawnPipe()

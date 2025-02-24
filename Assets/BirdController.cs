@@ -10,7 +10,6 @@ public class BirdController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        gameOverPanel.SetActive(false);
     }
 
     void Update()
@@ -32,12 +31,15 @@ public class BirdController : MonoBehaviour
         {
             GameOver();
         }
+        else if (collision.gameObject.CompareTag("Pipe"))
+        {
+            GameOver();
+        }
     }
 
     void GameOver()
     {
         Debug.Log("Game Over!");
         Time.timeScale = 0; // 
-        gameOverPanel.SetActive(true);
     }
 }
